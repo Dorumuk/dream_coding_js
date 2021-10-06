@@ -1,0 +1,4 @@
+- js 공식사이트 : ecmascript
+- js 추천사이트 : mozilla MDN
+
+> html에서 js를 어떻게 잘 포함시킬 수 있는가?
