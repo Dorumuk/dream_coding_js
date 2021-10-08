@@ -1,0 +1,4 @@
+절차지향 언어(PP)(Procedure Programming)
+=> 함수가 굉장히 중요해짐
+
+객체지향 언어(OOP)(Object Oriented Programming)

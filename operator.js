@@ -1,3 +1,5 @@
+// Ch4. Operator
+
 // 1. String concatenation
 // 문자열 더하기
 // 'my' + 'cat'
@@ -5,7 +7,7 @@
 // 2. Numeric operators
 // 1+1
 
-// 3. Icrement and derement operators
+// 3. Icrement and decrement operators
 let counter = 2;
 const preIncrement = ++counter;
 const postdecrement = counter--;
@@ -24,7 +26,7 @@ const value1 = true;
 const value2 = true;
 
 // 👍 : Js는 아래 복수 조건문을 확인할 때, value1이 true이면 뒤의 것을 안 확인한다.
-// 그러므로 복잡한 조건(expression, 함수)을 뒤에 위치하는 것이 성능에 좋다.!!
+// 그러므로 복잡한 조건(expression, 함수)을 뒤에 위치하는 것이 성능에 좋다.!! 😃
 console.log(`or: ${value1 || value2 || check()}`);
 console.log(`or: ${value1 && value2 && check()}`);
 

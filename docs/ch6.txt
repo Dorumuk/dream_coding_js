@@ -1,0 +1,22 @@
+class는
+fields, method의 집합이다.
+
+data class는
+fields로만 이루어진 클래스이다.
+
+> encaptulelation (캡슐화)
+내부적으로 보여지는 변수 / 밖에서 보여지는 변수
+
+> 상속, 다향성
+
+
+--------------------
+1) Class
+: 붕어빵 틀, 설계도 , 청사진(blue print), template
+// 데이터 x, 데이터 형태만 정의
+
+2) Object
+: class에 데이터를 추가한 형태, 객체
+- instance of a class
+
+// 메모리에 올라간다.
