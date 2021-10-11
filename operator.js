@@ -1,5 +1,4 @@
 // Ch4. Operator
-
 // 1. String concatenation
 // 문자열 더하기
 // 'my' + 'cat'
@@ -13,8 +12,8 @@ const preIncrement = ++counter;
 const postdecrement = counter--;
 
 //  4. Assignment operators
-let x = 3;
-x+=1
+// let x = 3;
+// x+=1
 
 // 5. Comparison operators
 // <, > <=

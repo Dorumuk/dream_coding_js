@@ -95,7 +95,7 @@ randomQuiz('love you', printYes, printNo)
 // Arrow fuction
 // always anonymous
 const simplePrint= (a, b)=> a + b;
-const simplePrint= (a, b)=> {
+const simplePrint2= (a, b)=> {
     console.log("hi");
     return a * b;
 };
@@ -113,6 +113,7 @@ function calculate(command, a, b) {
         case 'divide': return a / b;
         case 'multiply': return a * b;
         case 'remainder': return a % b;
-        default: console.log("please retry again"); break;
+        default: throw Error("unknown command");
+        // default: console.log("please retry again"); break;
     }
 }
