@@ -90,7 +90,7 @@ const students = [
   // console.log(scoreArr.toLocaleString());
   const result = students
     .map(v => v.score)
-    .join(); // 이렇게 작성하는 것을 보자 😲
+    .join(); // 이렇게 작성하는 것을 보자 😲  
   console.log(result);  
 }
 
