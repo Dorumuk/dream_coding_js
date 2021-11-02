@@ -1,4 +1,4 @@
-'use strict';
+"use strict";
 
 // JavaScript is synchronous.
 // Excute the code block in order after hoisting.
@@ -6,53 +6,52 @@
 
 // 서브루틴, 람다표현식, 함수 포인터 등으로 callback을 표현할 수 있다.
 
-console.log('1');
+console.log("1");
 setTimeout(() => {
-    console.log('2');
-}, 1000)
-console.log('3');
+    console.log("2");
+}, 1000);
+console.log("3");
 
 // Synchronous callback
 function printImmediately(print) {
-    print();    
+    print();
 }
 
 printImmediately(() => console.log("hello"));
 
 // Asynchronous callback
 function printWithDelay(print, delay) {
-    setTimeout(()=>{
+    setTimeout(() => {
         print();
-    }, delay)
+    }, delay);
 }
 
 printWithDelay(() => console.log("async hello"), 2000);
-
 
 // ---------------------------------------------------------------------------------
 // Callback Hell example
 class UserStorage {
     loginUser(id, pw, onSuccess, onError) {
         setTimeout(() => {
-            if(
-                (id === 'ellie' && pw === 'dream') ||
-                (id === 'coder' && pw === 'academy')
+            if (
+                (id === "ellie" && pw === "dream") ||
+                (id === "coder" && pw === "academy")
             ) {
                 onSuccess(id);
             } else {
-                onError(new Error('not found'));
+                onError(new Error("not found"));
             }
-        },2000)
+        }, 2000);
     }
 
     getRoles(user, onSuccess, onError) {
         setTimeout(() => {
-            if (user === 'ellie') {
-                onSuccess({ name: 'ellie', role: 'admin'});
+            if (user === "ellie") {
+                onSuccess({ name: "ellie", role: "admin" });
             } else {
-                onError(new Error('no acess'));
+                onError(new Error("no acess"));
             }
-        })
+        });
     }
 }
 
@@ -68,25 +67,24 @@ class UserStorage {
 // userStorage.loginUser('ellie', 'dream', onLoginSuccess, onLoginError);
 // userStorage.getRoles(userId, (msg)=> console.log(msg), onLoginError);
 
-
 const userStorage = new UserStorage();
-const id = prompt('enter your id');
-const password = prompt('enter your password');
+const id = prompt("enter your id");
+const password = prompt("enter your password");
 userStorage.loginUser(
     id,
     password,
-    user => { 
+    (user) => {
         userStorage.getRoles(
             user,
-            userWithRole => {
+            (userWithRole) => {
                 alert(`Hello ${userWithRole.name}, ${userWithRole.role}`);
             },
-            error => {
+            (error) => {
                 console.log(error);
             }
         );
     },
-    error => {
+    (error) => {
         console.log(error);
     }
 );

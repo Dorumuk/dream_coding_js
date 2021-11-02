@@ -3,7 +3,7 @@
 // JSON Diff
 // JSON beatifier
 // JSON Parser
-// JSON Validator // 알맞은 json 포맷인지 확인
+// JSON Validator // 알맞은 json 포맷인지 확인 
 
 
 //1. Object to JSON
@@ -16,7 +16,7 @@ json = JSON.stringify(['apple', 'banana']);
 console.log(json);
 
 const rabbit = {
-    name: 'charm',
+    name: 'charm', 
     color: 'white',
     size: null,
     birthDate: new Date(),
