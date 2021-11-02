@@ -41,3 +41,4 @@ userStorage.loginUser(id, password)
 
 
 // async - await는 promise를 단순하고 동기적으로 보이게 도와준다.
+// 기존에 존재하는 것 위에 , 감싸서 간편하게 api를 제공받는 것 (syntatic sugar ex) class) ✨
