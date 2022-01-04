@@ -21,11 +21,11 @@ user1.then(console.log)
 
 
 // 1. async (synthatic sugar)
-// async를 붙이면 promise를 리턴하는 함수로 바뀐다.
+// async를 붙이면 promise를 리턴하는 함수로 바뀐다. 👈👈
 async function fetchUser() {
     // do network request in 10 secs ....
     // return 'ellie';
-    return 'ellie';
+    return 'ellie'; // 👈👈 resolve() 역할!!!!
 }
 
 const user = fetchUser();

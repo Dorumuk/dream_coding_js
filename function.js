@@ -1,6 +1,6 @@
 // Ch5. Function
 // - fundamental building block in the program
-// - subprogram cna be used multiple times
+// - subprogram can be used multiple times
 // - performs a task or calculates a value
 
 // 1. Function declaration
@@ -56,7 +56,7 @@ function upgradeUser(user) {
     // long upgrade logic ...
 }
 
-// First-class function
+// ✨✨✨ First-class function
 // functions are treated like any other variable
 // can be assigned ass a value to variable
 // can be passed as an argument to other function. (파라미터)

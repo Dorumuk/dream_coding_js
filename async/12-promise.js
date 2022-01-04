@@ -13,7 +13,7 @@
 
 // 1. Producer
 // when new Promise is created, the excutor runs automatically ❗❗
-// promise를 선언함과 동시에 아래 callback 함수가 바로 실행된다!
+// promise를 선언함과 동시에 아래 callback 함수가 바로 실행된다! 불필요하게 초기에 실행될 수 있다.
 const promise = new Promise((resolve, reject) => {
     // doing some  heavy work (network, read files)
     console.log("doing something...");
@@ -26,7 +26,7 @@ const promise = new Promise((resolve, reject) => {
 // 2. Concumers: then, catch, finally
 // chainning
 promise
-    .then((value) => {
+    .then((value) => { // 성공적으로 promise 함수가 실행되어 resolve함수를 실행 했을 경우, "eliie"를 value 파라미터를 통해 받을 수 있다.
         console.log(value); // ellie
     })
     .catch((error) => {
@@ -44,14 +44,14 @@ const fetchNumber = new Promise((resolve, reject) => {
 });
 
 fetchNumber
-    .then((num) => num * 2)
-    .then((num) => num * 3)
+    .then((num) => num * 2) // 2
+    .then((num) => num * 3) // 6
     .then((num) => {
         return new Promise((resolve, reject) => {
             setTimeout(() => {
                 resolve(num - 1);
             }, 1000);
-        });
+        }); // 값 또는 Promise를 리턴 할 수 있다.
     })
     .then((num) => console.log(num));
 

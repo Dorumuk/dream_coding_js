@@ -3,7 +3,16 @@
 // Whole-script strict mode syntax
 // 바닐라 자바스크립트를 사용할 경우
 // 너무 유연해서 위험한 자바스크립트의 특성을 잡아준다. (in ecma)
-'use strict'; // 1. Use Strict ✨ 😃
+'use strict'; // 1. Use Strict ✨ 😃 (sloppy mode)
+// 1) var 표현 없이 변수 선언할 때의 오류
+// 2) NaN를 할당했을 때 오류 발생
+// 3) Object delete 했을 때 오류 throwing
+// 4) 객체 프로퍼티에서의 문제(다른 타입의 객체 호출, getter only에 접근, 확장불가 객체에 확장시도)
+// 5) 중복 파라미터, 프로퍼티 에러 throwing
+// 6) 8진수 표현 사용 015, 0o10
+// 7) primitive 값에 프로퍼티 설정 에러
+// 8) with()사용 eval()사용
+// ...
 
 console.log("Hello World");
 
@@ -32,7 +41,8 @@ const a = 5; // (immutable data type)
 // 4. Variable types
 // pimtive, single item : number, string, boolean, null, undefined, symbol
 // object, box container
-// function, 😃 first-class function : 함수를 다른 데이터 타입처럼 선언, 리턴, 인자로 사용 가능 ( 특이점 )
+// function
+// 😃 first-class function : 함수를 다른 데이터 타입처럼 선언, 리턴, 인자로 사용 가능 ( 특이점 )
 const infinity = 1 / 0;
 const negativeInfinity = -1 / 0;
 const nAn = 'not a number' / 2; // NaN : Not a number
